@@ -1,0 +1,10 @@
+<% if (@fuzzy_words == nil || @fuzzy_words.empty?) %>
+  <h1> Sorry, no words were found with this query. </h1>
+<% else %>
+<h1>Search results: </h1><br>
+  <%@fuzzy_words.each do |word| %>
+  <ul>
+  <li><%=link_to word.name, word_path(word.id)%></li>
+  </ul>
+  <%end%>
+<% end %> 

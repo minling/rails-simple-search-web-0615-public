@@ -1,0 +1,6 @@
+<h1>All Words </h1>
+<% @words.each do |word| %>
+  <ul>
+    <li><%= link_to word.name, word_path(word.id)%></li>
+  </ul>
+<% end %>

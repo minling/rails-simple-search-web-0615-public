@@ -1,0 +1,6 @@
+<h1>Search for a Word!</h1><br>
+<%= form_tag("/search", method: "get") do %>
+  <%= label_tag(:keyword, "Searching For") %>
+  <%= text_field_tag(:keyword, nil,  placeholder: 'ex. cat') %>
+  <%= submit_tag("Search") %>
+<% end %>
